@@ -12,7 +12,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<h5>${Profile.fullName}</h5>
-	<p>${Profile.summary}</p>
+	<p>hello this home page</p>
 </body>
 </html>
