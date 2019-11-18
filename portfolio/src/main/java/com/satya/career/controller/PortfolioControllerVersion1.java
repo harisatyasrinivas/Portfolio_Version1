@@ -25,9 +25,10 @@ import com.satya.career.service.WorkExpService;
 
 
 @Controller
+@RequestMapping("/")
 public class PortfolioControllerVersion1 {
 	
-	//@RequestMapping("/")
+
 
 	@Autowired
 	private ProfileService profileService;
