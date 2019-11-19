@@ -1,9 +1,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
-<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html lang="en">
 <head>
 <title>Portfolio</title>
@@ -17,27 +15,23 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-<link href="<spring:url value="/css/mystyle.css" />" rel="stylesheet"
+<link href="<c:url value="/css/mystyle.css" />" rel="stylesheet"
 	type="text/css" />
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 	<!-- 	Jumbotron for displaying Name , Role and Status -->
 	<section id="mynavbar"> <nav
-		class="navbar navbar-expand-sm navbar-light fixed-top"> <a
-		class="navbar-brand"> <img
-		src="<spring:url value="/images/Portfolio_Logo.jpg" />" width="30"
-		height="30" class="d-inline-block align-top" alt="P">Portfolio
-	</a>
+		class="navbar navbar-expand-sm navbar-light fixed-top"> 
+		<a class="navbar-brand"> Portfolio 	</a>
 	<button type="button" class="navbar-toggler" data-toggle="collapse"
-		data-target="#nav">
-		<span class="navbar-toggler-icon"></span>
+		data-target="#nav"> <span class="navbar-toggler-icon"></span>
 	</button>
 
 	<div class="collapse navbar-collapse justify-content-between" id="nav">
 		<ul class="navbar-nav">
 			<li class="nav-link text-light font-weight-bold px-3"><a
-				class="nav-link nav-link active" href="#Home">Home</a></li>
+				class="nav-link nav-link" href="#Home">Home</a></li>
 			<li class="nav-link text-light font-weight-bold px-3"><a
 				class="nav-link" href="#Experience">Experience</a></li>
 			<li class="nav-link text-light font-weight-bold px-3"><a
@@ -86,6 +80,7 @@
 				</div>
 			</div>
 		</div>
+		</div>
 		<br>
 
 		<!-- 	container for diplaying image and mystory -->
@@ -95,13 +90,13 @@
 					global change"</h5>
 				<blockquote class="blockquote">
 					<p class="white-space-pre">${Profile.story }</p>
-					<footer class="blockquote-footer text-right">${Profile.nickName}</footer>
+					<p class="blockquote-footer text-right">${Profile.nickName}</p>
 				</blockquote>
 			</div>
 
 			<div class="col-sm-3">
 				<div class="circular--portrait float-right">
-					<img src="<spring:url value="/images/MyProfilePic.jpg" />" />
+					<img src="<c:url value="/images/MyProfilePic.jpg" />" />
 				</div>
 			</div>
 		</div>
