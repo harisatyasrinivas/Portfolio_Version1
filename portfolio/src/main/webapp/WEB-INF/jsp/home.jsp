@@ -215,7 +215,7 @@
 		<div class="col-sm-4">
 			<table>
 				<thead>
-					<h6 class="text-uppercase font-weight-bold">Contact</h6>
+					<p class="text-uppercase font-weight-bold">Contact</p>
 				</thead>
 				<tr>
 					<td><img
