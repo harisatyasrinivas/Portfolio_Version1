@@ -25,7 +25,7 @@ import com.satya.career.service.WorkExpService;
 
 
 @Controller
-@RequestMapping("/")
+@RequestMapping(value = "/")
 public class PortfolioControllerVersion1 {
 	
 
@@ -59,7 +59,7 @@ public class PortfolioControllerVersion1 {
 	}
 
 	// read data from database
-	@RequestMapping(value = "/")
+
 	public String getMyProfile(Model model) {		
 		long profileId =3; 
 		System.out.println("Mapping done for profile id"+profileId);

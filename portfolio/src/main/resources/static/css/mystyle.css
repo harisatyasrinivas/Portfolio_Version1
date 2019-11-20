@@ -1,11 +1,10 @@
-.navbar {
-	margin-bottom: 0;
-	border-radius: 0;
-	background-color: #FDFEFE;
-}
-
 .main {
 	background-color: #85C1E9;
+	color: #9C89B8;
+}
+
+nav.navbar-color {
+	background-color: #9C89B8;
 }
 
 
@@ -41,8 +40,6 @@ h1, h2, h3, h4, h5, h6 {
 .socialbar {
 	background-color: #85929E;
 }
-
-.contact-panel{background-color: ;}
 
 
 footer.footer {
