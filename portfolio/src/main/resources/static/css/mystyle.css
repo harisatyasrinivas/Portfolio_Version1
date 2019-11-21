@@ -1,12 +1,16 @@
-.main {
-	background-color: #85C1E9;
-	color: #9C89B8;
+.navbar {
+	margin-bottom: 0;
+	border-radius: 0;
+	background-color: #FDFEFE;
 }
 
 nav.navbar-color {
 	background-color: #9C89B8;
 }
 
+.main {
+	background-color: #85C1E9;
+}
 
 .circular--portrait {
 	position: relative;
@@ -23,8 +27,9 @@ nav.navbar-color {
 
 p.mystory {
 	font-family: 'Tinos', serif;
-	font-weight: 700;
+	font-weight: 500;
 }
+
 
 body {
 	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -37,6 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: 700;
 }
 
+
 .socialbar {
 	background-color: #85929E;
 }
@@ -47,13 +53,6 @@ footer.footer {
 	margin-top: 10px;
 	text-align: center;
 }
-
-.page-footer {
-	
-}
-
-.connect-panel {background-color:#21d192}
-
 
 hr { 
   display: block;
@@ -98,6 +97,7 @@ ul.timeline>li:before {
 	height: 20px;
 	z-index: 400;
 }
+
 
 .float-left {
 	color: green;

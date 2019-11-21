@@ -1,6 +1,7 @@
 package com.satya.career.controller;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,7 +13,6 @@ import com.satya.career.entity.AreaOfExpertise;
 import com.satya.career.entity.Education;
 import com.satya.career.entity.Profile;
 import com.satya.career.entity.Project;
-import com.satya.career.entity.Skill;
 import com.satya.career.entity.WorkExp;
 import com.satya.career.service.AddressService;
 import com.satya.career.service.AreaOfExpertiseService;
@@ -25,10 +25,7 @@ import com.satya.career.service.WorkExpService;
 
 
 @Controller
-@RequestMapping(value = "/")
 public class PortfolioControllerVersion1 {
-	
-
 
 	@Autowired
 	private ProfileService profileService;
@@ -59,7 +56,7 @@ public class PortfolioControllerVersion1 {
 	}
 
 	// read data from database
-
+	@RequestMapping(value = "/")
 	public String getMyProfile(Model model) {		
 		long profileId =3; 
 		System.out.println("Mapping done for profile id"+profileId);
@@ -69,20 +66,22 @@ public class PortfolioControllerVersion1 {
         List<WorkExp> workExpList = workExpService.getWorkExpList();
         List<AreaOfExpertise> areaOfExpertiseList = areaOfExpertiseService.getAreaOfExpertiseList();
         List<Project> projectList = projectService.getProjectsList();
-        List<Skill> skillsList =skillService.getSkill();
+        Map<String,List<String>> skill = skillService.getskillsinfo();
+        System.out.println(skill);
+        //List<String> skillFeilds = skillService.getUniqueSkillFeilds();
 		model.addAttribute("Profile",profile);
 		model.addAttribute("Address",address);
 		model.addAttribute("EducationList",edu);
 		model.addAttribute("WorkExpList",workExpList);
 		model.addAttribute("AreaOfExpertiseList",areaOfExpertiseList);
 		model.addAttribute("ProjectList",projectList);
-		model.addAttribute("SkillsList",skillsList);
+		model.addAttribute("Skillmap",skill);
 		return "home";
 		}
 	
 	@RequestMapping(value="/test/")
 	public String testweb() {
-		System.out.println("Website test method in controller executed");
+		System.out.println("Website test method from profile controller");
 		return "index";		
 	}
 	
